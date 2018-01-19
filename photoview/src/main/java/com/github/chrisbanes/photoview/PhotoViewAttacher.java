@@ -59,7 +59,7 @@ public class PhotoViewAttacher implements View.OnTouchListener,
 
     private boolean mAllowParentInterceptOnEdge = true;
     private boolean mBlockParentIntercept = false;
-
+    private boolean mAllowDragOutSide = false;
     private ImageView mImageView;
 
     // Gesture Detectors
@@ -508,6 +508,14 @@ public class PhotoViewAttacher implements View.OnTouchListener,
     public void setZoomable(boolean zoomable) {
         mZoomEnabled = zoomable;
         update();
+    }
+
+    public boolean ismAllowDragOutSide(){
+        return mAllowDragOutSide;
+    }
+
+    public void setmAllowDragOutSide(boolean allowDragOutSide){
+        mAllowDragOutSide = allowDragOutSide;
     }
 
     public void update() {
